@@ -4,4 +4,10 @@
 body {
 	background: url(img/bg.jpg) no-repeat top center;
 	background-size: cover;
+	color: #FFF;
+}
+body.one {
+}
+body.two {
+	background-image: url(img/Alohomora.jpg);
 }
