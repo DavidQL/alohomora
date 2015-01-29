@@ -1,28 +1,21 @@
-
 $(document).ready(function() {
-  var steps = {
-
-  };
-
   $('button.reset').click(function() {
     steps = {}
     $('.achievement').text("");
   });
+
   window.ondevicemotion = function(event) {
     var x = Math.floor(event.accelerationIncludingGravity.x);
     var y = Math.floor(event.accelerationIncludingGravity.y);
 
-    if (y >= 8) {
-      steps.has_reached_8 = true;
-    }
-    if (y <= -8) {
-      steps.has_reached_neg_8 = true;
-    }
+    $('.data').text('x: ' + x + ' y: ' + y);
 
-    $('.data').text("x: " + x + "  y: " + y);
-
-    if (steps.has_reached_8 && steps.has_reached_neg_8) {
-      $('.achievement').text("Lumos unlocked!")
+    if (x === -10 && y === -1) {
+      $('.achievement').text("Lumos!")
+    } else if (x === 0 && y === -10) {
+      $('.achievement').text("Expelliarmus!")
+    } else if (x === 0 && y === 0) {
+      $('.achievement').text("Wingardium Leviosa!")
     }
   }
 });
