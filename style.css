@@ -23,3 +23,9 @@ body.three {
 body.four {
 	background-image: url(img/alohamora.jpg);
 }
+
+button.gotit {
+  position: absolute;
+  bottom:0;
+  left:0;
+}
