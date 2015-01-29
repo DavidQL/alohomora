@@ -7,7 +7,14 @@ body {
 	color: #FFF;
 }
 body.one {
+	background-image: url(img/lumos.jpg);
 }
 body.two {
-	background-image: url(img/Alohomora.jpg);
+	background-image: url(img/expelliarmus.jpg);
+}
+body.three {
+	background-image: url(img/wingardiumleviosa.jpg);
+}
+body.four {
+	background-image: url(img/alohomora.jpg);
 }
