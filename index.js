@@ -1,7 +1,13 @@
-(function() {
+
+$(document).ready(function() {
   var steps = {
 
   };
+
+  $('button.reset').click(function() {
+    steps = {}
+    $('.achievement').text("");
+  });
   window.ondevicemotion = function(event) {
     var x = Math.floor(event.accelerationIncludingGravity.x);
     var y = Math.floor(event.accelerationIncludingGravity.y);
@@ -19,4 +25,4 @@
       $('.achievement').text("Lumos unlocked!")
     }
   }
-})();
+});
